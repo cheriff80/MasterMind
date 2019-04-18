@@ -1,0 +1,158 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fila_intento"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/botonesJuego"
+    android:paddingLeft="@dimen/paddingHorizontal"
+    android:paddingRight="@dimen/paddingHorizontal"
+    android:paddingBottom="@dimen/paddingVertical">
+
+    <TextView
+        android:id="@+id/textoNumeros"
+        style="@android:style/Widget.DeviceDefault.TextView"
+        android:layout_width="28dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="10"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ibUno"
+        android:layout_width="@dimen/botonesJuego"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/marron"
+        android:clickable="false"
+        android:onClick="solucion"
+        android:scaleType="fitCenter"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/textoNumeros"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ImageButton
+        android:id="@+id/ibDos"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/marron"
+        android:focusable="false"
+        android:onClick="solucion"
+        app:layout_constraintBottom_toBottomOf="@+id/ibTres"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/ibUno"
+        app:layout_constraintTop_toTopOf="@+id/ibTres"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_weight="1" />
+
+    <ImageButton
+        android:id="@+id/ibTres"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/marron"
+
+        android:clickable="false"
+        android:onClick="solucion"
+        app:layout_constraintBottom_toBottomOf="@+id/ibCuatro"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/ibDos"
+        app:layout_constraintTop_toTopOf="@+id/ibCuatro"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_weight="1" />
+
+    <ImageButton
+        android:id="@+id/ibCuatro"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:clickable="false"
+        android:onClick="solucion"
+        android:scaleType="fitCenter"
+        android:src="@drawable/marron"
+        app:layout_constraintBottom_toBottomOf="@+id/ibTres"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/ibTres"
+        app:layout_constraintTop_toTopOf="@+id/ibTres"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_weight="1" />
+
+
+    <ImageView
+        android:id="@+id/ivFondoMadera"
+        android:layout_width="52dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="center"
+        android:src="@drawable/madera2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintStart_toEndOf="@+id/ibCuatro"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_weight="2" />
+
+    <ImageView
+        android:id="@+id/ivAciertosSI"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/negro"
+        app:layout_constraintStart_toStartOf="@+id/ivFondoMadera"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivAciertosII"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/negro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ivFondoMadera" />
+
+    <ImageView
+        android:id="@+id/ivAciertosID"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/negro"
+        app:layout_constraintBottom_toBottomOf="@+id/ivFondoMadera"
+        app:layout_constraintStart_toEndOf="@+id/ivAciertosII" />
+
+    <ImageView
+        android:id="@+id/ivAciertosSD"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/negro"
+        app:layout_constraintStart_toEndOf="@+id/ivAciertosSI"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
